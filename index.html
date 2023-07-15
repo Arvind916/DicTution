@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DicTution</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url("Ebg.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+
+    
+    #content {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .card h2 {
+      margin-top: 0;
+    }
+    
+    .card p {
+      margin-bottom: 0;
+    }
+    
+    .card img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+    .highlight{
+        color: #df760e;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to <span class="highlight">DicTution:</span>The Ultimate Word Challenge!</h1>
+  </header>
+
+  <div id="content">
+    <div class="card">
+      <img src="learn.jpg" alt="Image 1">
+      <div>
+        <button id="btn1" onclick="learn()">LEARN</button>
+        <p>"Challenge yourself to accurately transcribe spoken words and sentences in our fun and educational dictation game."</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="play.jpg" alt="Image 2">
+      <div>
+        <button id="btn1" onclick="play()">PLAY</button>
+        <p>"Ready to engage in an exciting educational game?. "Let's play to test your knowledge and have fun while learning!"</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="about.jpg" alt="Image 3">
+      <div>
+        <button id="btn1" onclick="about()">About Us</button>
+        <p>"We focus on excellence and a passion for innovation".</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023. All rights reserved.</p>
+  </footer>
+  <script>
+      function home() {
+        window.location.href = "index.html";
+      }
+
+      function learn() {
+        window.location.href = "learn.html";
+      }
+
+      function play() {
+        window.location.href = "play.html";
+      }
+      function about() {
+        window.location.href = "about.html";
+      }
+  </script>
+</body>
+</html>

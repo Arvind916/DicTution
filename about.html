@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    header {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    #content {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+      line-height: 1.5;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+      }
+
+      li {
+        float: left;
+        display: inline;
+        text-decoration: none;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #34f588;
+      }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a onclick="home()">Home</a></li>
+          <li><a onclick="learn()">Learn</a></li>
+          <li><a onclick="play()">Play</a></li>
+        </ul>
+      </nav>
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+
+  <div id="content">
+    <h2>Our Story</h2>
+    <p>DicTution is an exciting and engaging online game designed to improve your spelling and listening skills. Whether you're a student, a language enthusiast, or simply someone looking to enhance your vocabulary, DicTution offers a fun and challenging way to master the art of dictation.</p>
+
+    <p>With DicTution, you can put your spelling abilities to the test by listening to audio clips and accurately transcribing the spoken words. Our diverse collection of challenging word lists and customizable difficulty levels ensure that there's always a new and stimulating challenge waiting for you.</p>
+
+    <p>At DicTution, we believe that learning should be enjoyable, and our game is designed to provide an immersive and interactive experience. Sharpen your listening skills, enhance your spelling accuracy, and expand your vocabulary—all while having a great time!</p>
+
+    <p>Join our growing community of word enthusiasts today and embark on an exciting journey of learning and improvement with DicTution!</p>
+
+    <h2>Our Mission</h2>
+    <p>Our mission is to provide high-quality products/services that exceed customer expectations and contribute to their success. We aim to build long-term relationships with our clients by delivering innovative solutions and exceptional customer experiences. Through continuous improvement and a customer-centric approach, we strive to make a positive impact in the industry.</p>
+
+    <button class="btn">Contact Us</button>
+  </div>
+
+  <script>
+    const btn = document.querySelector('.btn');
+    
+    btn.addEventListener('click', () => {
+      // Perform action when the button is clicked
+      // Example: Redirect to a contact page
+      window.location.href = 'contact.html';
+    });
+    function home() {
+        window.location.href = "index.html";
+      }
+
+      function learn() {
+        window.location.href = "learn.html";
+      }
+
+      function play() {
+        window.location.href = "play.html";
+      }
+      function about() {
+        window.location.href = "about.html";
+      }
+  </script>
+</body>
+</html>

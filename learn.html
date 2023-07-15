@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Table</title>
+    <style>
+      body {
+        margin-top: 0;
+        background: linear-gradient(
+          338deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 3%,
+          rgb(7, 57, 18) 100%
+        );
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+        display: inline;
+        text-decoration: none;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #34f588;
+      }
+
+      h1 {
+        margin-left: 480px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table tr {
+        background-color:beige;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #ff9d00;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a onclick="home()">Home</a></li>
+        <li><a onclick="learn()">Learn</a></li>
+        <li><a onclick="play()">Play</a></li>
+        <li><a onclick="about()">About</a></li>
+      </ul>
+    </nav>
+    <!-- <button id="btn1" onclick="home()">Home</button> -->
+    <h1 style="color: azure;">Word Table</h1>
+    <table>
+      <tr>
+        <th>Word</th>
+        <th>Definition</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>Abundant</td>
+        <td>Plentiful; existing in great quantities</td>
+        <td>The farm had an abundant harvest of crops.</td>
+      </tr>
+      <tr>
+        <td>Eccentric</td>
+        <td>Unconventional; peculiar; odd</td>
+        <td>The artist had an eccentric personality.</td>
+      </tr>
+      <tr>
+        <td>Impeccable</td>
+        <td>Flawless; perfect; without errors</td>
+        <td>Her performance was impeccable.</td>
+      </tr>
+      <!-- Add more rows with words and their definitions as needed -->
+      <tr>
+        <td>Conundrum</td>
+        <td>A confusing or difficult problem</td>
+        <td>The puzzle presented a conundrum that took hours to solve.</td>
+      </tr>
+      <tr>
+        <td>Vex</td>
+        <td>To annoy or irritate</td>
+        <td>The constant noise from construction work vexed the residents.</td>
+      </tr>
+      <tr>
+        <td>Eloquent</td>
+        <td>Expressive; fluent in speech or writing</td>
+        <td>
+          The speaker delivered an eloquent speech that captivated the audience.
+        </td>
+      </tr>
+      <tr>
+        <td>Panacea</td>
+        <td>A solution or remedy for all problems or difficulties</td>
+        <td>He believed that education was the panacea for poverty.</td>
+      </tr>
+      <tr>
+        <td>Quintessential</td>
+        <td>
+          Representing the most perfect or typical example of a quality or class
+        </td>
+        <td>
+          The little black dress is often considered the quintessential wardrobe
+          staple.
+        </td>
+      </tr>
+      <tr>
+        <td>Inevitable</td>
+        <td>Certain to happen; unavoidable</td>
+        <td>
+          With the storm approaching, canceling the outdoor event was
+          inevitable.
+        </td>
+      </tr>
+      <tr>
+        <td>Novice</td>
+        <td>
+          A person who is new or inexperienced in a particular skill or activity
+        </td>
+        <td>
+          She was a novice at playing the guitar and took lessons to improve.
+        </td>
+      </tr>
+      <tr>
+        <td>Exemplary</td>
+        <td>Worthy of imitation; serving as a good example</td>
+        <td>
+          The teacher's exemplary behavior had a positive influence on her
+          students.
+        </td>
+      </tr>
+      <tr>
+        <td>Ubiquitous</td>
+        <td>Seemingly present everywhere; widespread</td>
+        <td>Mobile phones have become ubiquitous in today's society.</td>
+      </tr>
+      <tr>
+        <td>Pristine</td>
+        <td>Unspoiled; in its original condition</td>
+        <td>
+          The beach was pristine with its clear blue waters and white sands.
+        </td>
+      </tr>
+      <tr>
+        <td>Ephemeral</td>
+        <td>Lasting for a short time; transient</td>
+        <td>
+          The beauty of cherry blossoms is ephemeral, as they bloom for only a
+          few weeks.
+        </td>
+      </tr>
+      <tr>
+        <td>Enigmatic</td>
+        <td>Mysterious; difficult to understand or interpret</td>
+        <td>
+          The Mona Lisa's enigmatic smile has puzzled art enthusiasts for
+          centuries.
+        </td>
+      </tr>
+      <tr>
+        <td>Pragmatic</td>
+        <td>Practical; dealing with things sensibly and realistically</td>
+        <td>She took a pragmatic approach to solving the complex problem.</td>
+      </tr>
+      <tr>
+        <td>Pernicious</td>
+        <td>Causing harm or damage; deadly</td>
+        <td>
+          The pernicious effects of smoking on health are well-documented.
+        </td>
+      </tr>
+      <tr>
+        <td>Superfluous</td>
+        <td>Exceeding what is necessary; unnecessary</td>
+        <td>The redundant information in the report was deemed superfluous.</td>
+      </tr>
+
+      <tr>
+        <td>Ameliorate</td>
+        <td>To make better or improve</td>
+        <td>The new policies were implemented to ameliorate the situation.</td>
+      </tr>
+      <tr>
+        <td>Impeccable</td>
+        <td>Without any flaw or error; perfect</td>
+        <td>
+          Her presentation was impeccable, with flawless delivery and content.
+        </td>
+      </tr>
+      <tr>
+        <td>Indigenous</td>
+        <td>Native or originating from a particular region or country</td>
+        <td>
+          The tribe has preserved its indigenous culture and traditions for
+          generations.
+        </td>
+      </tr>
+      <tr>
+        <td>Meticulous</td>
+        <td>Showing great attention to detail; thorough</td>
+        <td>
+          She was known for her meticulous approach to project management.
+        </td>
+      </tr>
+      <tr>
+        <td>Prolific</td>
+        <td>Producing many works, results, etc.; highly productive</td>
+        <td>The artist was known for his prolific output of paintings.</td>
+      </tr>
+      <tr>
+        <td>Reverberate</td>
+        <td>To echo or resound; to have a lasting impact or effect</td>
+        <td>The sound of the church bells reverberated through the valley.</td>
+      </tr>
+      <tr>
+        <td>Ubiquitous</td>
+        <td>Seemingly present everywhere; widespread</td>
+        <td>
+          The use of social media has become ubiquitous in today's society.
+        </td>
+      </tr>
+      <tr>
+        <td>Serendipity</td>
+        <td>The occurrence of finding valuable or pleasant things by chance</td>
+        <td>
+          They met by serendipity and their friendship blossomed unexpectedly.
+        </td>
+      </tr>
+      <tr>
+        <td>Zealous</td>
+        <td>Full of enthusiasm and fervor</td>
+        <td>He was a zealous advocate for environmental conservation.</td>
+      </tr>
+      <tr>
+        <td>Intrinsic</td>
+        <td>Belonging to the essential nature of something; inherent</td>
+        <td>Her intrinsic motivation drove her to achieve her goals.</td>
+      </tr>
+    </table>
+    <script>
+      function home() {
+        window.location.href = "index.html";
+      }
+
+      function learn() {
+        window.location.href = "learn.html";
+      }
+
+      function play() {
+        window.location.href = "play.html";
+      }
+      function about() {
+        window.location.href = "about.html";
+      }
+    </script>
+  </body>
+</html>

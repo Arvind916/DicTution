@@ -1,0 +1,220 @@
+<
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play</title>
+    <style>
+      body {
+        background-image: url("bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      #container {
+        width: 500px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #container #myBtn {
+        color: aliceblue;
+        font-size: 18px;
+        margin-top: 80px;
+        margin-right: 100px;
+        padding: 14px 28px;
+        background: rgb(243,60,4);
+        background: linear-gradient(338deg, rgba(243,60,4,1) 0%, rgba(254,101,13,1) 3%, rgba(161,1,0,1) 96%, rgba(218,31,5,1) 100%);
+        
+      }
+
+      #sentence {
+        font-size: 24px;
+        margin: 20px 0;
+        opacity: 0%;
+      }
+
+      #input {
+        padding: 10px;
+        font-size: 18px;
+        
+      }
+
+      #submitBtn {
+        margin-top: 30px;
+        margin-left: 20px;
+        padding: 12px 22px;
+        background: rgb(4,243,236);
+background: linear-gradient(180deg, rgba(4,243,236,1) 0%, rgba(13,254,174,1) 3%, rgba(0,161,5,1) 96%, rgba(127,218,5,1) 100%);
+      }
+
+      #score {
+        font-size: 40px;
+        margin-top: 20px;
+        color: #34f588;
+      }
+
+      .correct {
+        color: green;
+      }
+
+      .incorrect {
+        color: red;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+      }
+
+      li {
+        float: left;
+        display: inline;
+        text-decoration: none;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color to #111 (black) on hover */
+      li a:hover {
+        background-color: #34f588;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tiledBackground">
+      <nav>
+        <ul>
+          <li><a onclick="home()">Home</a></li>
+          <li><a onclick="learn()">Learn</a></li>
+          <li><a onclick="play()">Play</a></li>
+          <li><a onclick="about()">About</a></li>
+        </ul>
+      </nav>
+
+      <div id="container">
+        <button id="myBtn">Start</button>
+        <div id="sentence"></div>
+        <input type="text" id="input" placeholder="Type here" />
+
+        <button onclick="checkAnswer()" id="submitBtn">Submit</button>
+        <div id="score"><span>Score:</span> <span id="points">0</span></div>
+      </div>
+    </div>
+
+    <script>
+      const sentences = [
+        "Abundant",
+        "Eccentric",
+        "Impeccable",
+        "Vex",
+        "Pristine",
+      ];
+
+      let currentSentence = 0;
+      let points = 0;
+
+      function displaySentence() {
+        document.getElementById("sentence").textContent =
+          sentences[currentSentence];
+      }
+
+      function checkAnswer() {
+        const input = document.getElementById("input").value.trim();
+        const sentence = sentences[currentSentence];
+        if (input.toLowerCase() === sentence.toLowerCase()) {
+          document.getElementById("sentence").classList.add("correct");
+          points += 10;
+        } else {
+          document.getElementById("sentence").classList.add("incorrect");
+          points -= 5;
+        }
+        document.getElementById("points").textContent = points;
+        setTimeout(nextSentence, 1000);
+      }
+
+      function nextSentence() {
+        document.getElementById("input").value = "";
+        document
+          .getElementById("sentence")
+          .classList.remove("correct", "incorrect");
+        currentSentence++;
+        if (currentSentence === sentences.length) {
+          alert("Game over! Your score is " + points);
+        } else {
+          displaySentence();
+        }
+      }
+
+      displaySentence();
+
+      /*
+// create an instance of the SpeechSynthesis API
+const synth = window.speechSynthesis;
+
+// function to speak a given text
+function speak(text) {
+  // create a new SpeechSynthesisUtterance object
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  // speak the utterance
+  synth.speak(utterance);
+}
+
+// example usage
+speak(sentences);
+*/
+
+      var myBtn = document.getElementById("myBtn"); // Get the button element by ID
+
+      myBtn.addEventListener("click", function () {
+        speak(sentences[0]);
+        myBtn.style.display = "none"; // Set the display property of the button to "none" to make it disappear
+      });
+
+      var currentIndex = 1; // Current index of the array
+      var submitBtn = document.getElementById("submitBtn"); // Get the submit button element
+
+      submitBtn.addEventListener("click", function () {
+        if (currentIndex < sentences.length) {
+          // If current index is less than array length
+          var textToSpeak = sentences[currentIndex]; // Get the text at the current index
+          speak(textToSpeak); // Call the speak function to "speak" the text
+          currentIndex++; // Increment the current index for the next iteration
+        }
+      });
+
+      function speak(text) {
+        // Function to "speak" the text
+        var utterance = new SpeechSynthesisUtterance(text); // Create a new SpeechSynthesisUtterance object
+        speechSynthesis.speak(utterance); // Call the speak method to speak the text
+      }
+
+      function home() {
+        window.location.href = "index.html";
+      }
+
+      function learn() {
+        window.location.href = "learn.html";
+      }
+
+      function play() {
+        window.location.href = "play.html";
+      }
+      function about() {
+        window.location.href = "about.html";
+      }
+    </script>
+  </body>
+</html>
